@@ -66,11 +66,10 @@
         position: relative;
         border: 1px solid #333;
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        cursor: pointer;
+        cursor: zoom-in;
       }
 
       .bento-item:hover {
-        transform: translateY(-5px) scale(1.02);
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
         border-color: var(--accent-orange);
         z-index: 10;
@@ -80,7 +79,8 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: transform 0.5s ease;
+        transition: transform 0.2s ease;
+        cursor: zoom-in;
       }
 
       .bento-item:hover img {
@@ -96,14 +96,6 @@
         padding: 20px;
         background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
         color: var(--text-white);
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.3s ease;
-      }
-
-      .bento-item:hover .bento-overlay {
-        opacity: 1;
-        transform: translateY(0);
       }
 
       .bento-cat {
@@ -142,6 +134,7 @@
         color: var(--bg-darker);
         position: relative;
         border: none;
+        cursor: not-allowed;
       }
 
       .bento-minimal h2 {
@@ -181,9 +174,7 @@
           <li><a href="index.html">Home</a></li>
           <li class="dropdown-parent">
             <input type="checkbox" id="stories-toggle" />
-
             <label for="stories-toggle" class="menu-link"> Stories ▾ </label>
-
             <ul class="dropdown-menu">
               <li><a href="biography.html">Biography</a></li>
               <li><a href="blog1.html">Blog Story 1</a></li>
@@ -197,6 +188,15 @@
               style="background: var(--accent-orange); color: white"
               >✦ Photos</a
             >
+          </li>
+          <li class="dropdown-parent">
+            <input type="checkbox" id="media-toggle" />
+            <label for="media-toggle" class="menu-link"> Media ▾ </label>
+            <ul class="dropdown-menu">
+              <li><a href="music.html">My Beats</a></li>
+              <li><a href="movies.html">My Movies</a></li>
+              <li><a href="series.html">My Series</a></li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -273,7 +273,7 @@
         </div>
 
         <div class="bento-item col-span-3">
-          <a href="images/gallery/childhood1.jpg" target="images">
+          <a href="images/gallery/childhood1.jpg">
             <img
               src="images/gallery/childhood1.jpg"
               alt="DreamPlay Encounters"
@@ -406,7 +406,7 @@
         </div>
 
         <div class="bento-item row-span-2 col-span-2">
-          <a href="images/bio/teen5.jpg" target="images">
+          <a href="images/bio/teen5.jpg">
             <img
               src="images/bio/teen5.jpg"
               alt="SHS Graduation Prom"
@@ -678,19 +678,15 @@
           <span>Back to Top</span>
         </a>
         <a href="#cat1">
-          <img src="images/buttons/childbtn.png" />
           <span>Childhood Memories</span>
         </a>
         <a href="#cat2">
-          <img src="images/buttons/teenbtn.png" />
           <span>Teenage Memories</span>
         </a>
         <a href="#cat3">
-          <img src="images/buttons/collegebtn.png" />
           <span>College Memories</span>
         </a>
         <a href="#cat4">
-          <img src="images/gallery/fav7.jpg" />
           <span>My Favorites</span>
         </a>
       </nav>
@@ -699,4 +695,3 @@
     <footer>&copy; 2026 Amir Lopez. All Rights Reserved.</footer>
   </body>
 </html>
-
